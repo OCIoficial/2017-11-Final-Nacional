@@ -1,0 +1,93 @@
+\documentclass{oci}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{subcaption}
+
+\title{La leyenda de Zolda}
+
+\begin{document}
+\begin{problemDescription}
+  \emph{La leyenda de Zolda} es una popular saga de videojuegos con ya más de 19
+  títulos, incluyendo aclamadas entregas como \emph{La zampoña del tiempo},
+  \emph{La princesa del amanecer}, \emph{Un enlace al futuro} y \emph{Aliento de
+  la civilización}.
+
+  En la última versión del videojuego, disponible solo desde hace algunos días,
+  existe una modalidad donde el personaje principal, \emph{Lonk}, debe
+  enfrentarse a una horda de \emph{meblins}.
+  En esta modalidad el escenario corresponde a un plano cartesiano como el que
+  se muestra en la figura de más abajo.
+  Nuestro héroe se encontrará siempre en la coordenada $(0,0)$ y los meblins
+  pueden estar en cualquier coordenada distinta a esta.
+  En la figura de más abajo Lonk está representado con una estrella y los meblins
+  mediante puntos.
+  \vspace{-0.5em}
+  \begin{center}
+  \includegraphics[scale=0.9]{zolda}
+  \end{center}
+  \vspace{-0.5em}
+  Para pasar de nivel Lonk debe eliminar al menos $K$ meblins del escenario
+  usando su poderoso \emph{ataque de giro}.
+  Con este ataque Lonk puede dañar todo a su alrededor de un solo golpe.
+  Dependiendo la potencia que use, Lonk puede variar el radio de alcance de su
+  ataque.
+  Específicamente, si Lonk escoge un radio entero $R$ eliminará a todos los
+  meblins que se encuentren dentro de este radio.
+  Con el fin de reservar energía para el futuro una buena estrategia es siempre
+  utilizar el menor radio con el cuál es posible eliminar a los $K$ meblins.
+  Por ejemplo, en el escenario mostrado anteriormente, si el objetivo es eliminar
+  $K=3$ meblins, el menor radio con que esto es posible es 2.
+
+  \begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.3\textwidth}
+      \centering
+      \includegraphics[scale=0.8]{zolda2}
+      \caption*{Con $R=2$ Lonk elimina los 3 meblins requeridos.}
+    \end{subfigure}
+    \hspace{3em}
+    \begin{subfigure}{0.3\textwidth}
+      \centering
+      \includegraphics[scale=0.8]{zolda3}
+      \caption*{Con $R=3$ Lonk elimina también 3 meblins.}
+    \end{subfigure}
+  \end{figure}
+
+  Como los fans encontraron la última versión  demasiado sencilla los
+  desarrolladores decidieron hacer esta modalidad del videojuego mucho más
+  complicada.
+  Para esto decidieron aumentar la cantidad de meblins.
+  En esta versión habrá tantos meblins que es más sencillo describir las
+  posiciones donde NO hay meblins.
+\end{problemDescription}
+
+\begin{inputDescription}
+  La entrada está descrita en varias líneas.
+  La primera línea contiene dos enteros $N$ y $K$ correspondientes
+  respectivamente a la cantidad de posiciones donde NO hay meblins y la cantidad
+  que hay que eliminar para pasar de nivel.
+  A continuación se entregan $N$ líneas cada una conteniendo dos enteros $X_i$ y
+  $Y_i$ que representan las coordenadas de un punto donde no hay un meblin
+  ($10^{-9}\leq X_i, Y_i\leq 10^9$).
+  Se garantiza que todas estas líneas serán distintas.
+\end{inputDescription}
+
+\begin{outputDescription}
+  La salida debe ser un único entero correspondiente al radio $R$
+  mínimo con el cual Lonk puede eliminar $K$ meblins.
+\end{outputDescription}
+
+\begin{scoreDescription}
+\score{0} Se probarán varios casos donde $N=0 y $0 < K \leq 10$.
+\score{0} Se probarán varios casos donde $0 < N \leq 10$ y $0 < K \leq 10$.
+\score{0} Se probarán varios casos donde $10 < N \leq 100$ y $10 < K \leq 5000$.
+\score{0} Se probarán varios casos donde $100 < N \leq 10^5$ y $1000 < K \leq 10^10$.
+\end{scoreDescription}
+
+\begin{sampleDescription}
+\sampleIO{sample-1}
+\sampleIO{sample-2}
+\sampleIO{sample-3}
+\end{sampleDescription}
+
+\end{document}
