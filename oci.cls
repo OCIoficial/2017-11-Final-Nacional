@@ -8,6 +8,7 @@
 \LoadClass[11pt]{article}
 
 \RequirePackage{fancyhdr}
+\RequirePackage{xcolor}
 \RequirePackage{graphicx}
 \RequirePackage{verbatim}
 \RequirePackage{enumitem}
@@ -45,26 +46,23 @@
 \addtolength{\parskip}{0.4\baselineskip}
 
 %% HEADER
-\global\let\phase\@empty
 \getenv[\phase]{OCIMATIC_PHASE}
 
 \setlength\headheight{54.3pt} 
 \pagestyle{fancy}
 \lhead{\includegraphics[height=37.5pt]{logo.eps}}
-\rhead{\@phase\ \the\year}
+\rhead{\phase\ \the\year}
 \renewcommand{\headrulewidth}{0.2pt}
 
 %% FOOTER
 \cfoot{}
 
 %% TITLE
-\global\let\@problem\@empty
 \getenv[\@problem]{OCIMATIC_PROBLEM_NUMBER}
-\newcommand{\problem}[1]{\def\@problem{#1}}
+\ifdefempty{\@problem}{\def\@problem{\texttt{<\hspace{0.5em}>}}}
 
-\global\let\@codename\@empty
 \getenv[\@codename]{OCIMATIC_CODENAME}
-\newcommand{\codename}[1]{\def\@codename{#1}}
+\ifdefempty{\@codename}{\def\@codename{<\hspace{4em}>}}
 
 
 \newcommand{\mymaketitle}{

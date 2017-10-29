@@ -1,0 +1,81 @@
+\documentclass{oci}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+
+\title{Transbordo en el aeropuerto}
+
+\begin{document}
+\begin{problemDescription}
+  A Lucas le encanta viajar.
+  Lo hace varias veces al año, escogiendo siempre un nuevo destino para conocer.
+  Para ahorrar dinero, y así poder viajar más, Lucas siempre toma los vuelos más
+  baratos.
+  Esto suele ser un problema pues a menudo tiene que realizar escalas y cambiar
+  de avión en muy poco tiempo.
+
+  Los aeropuertos están siempre divididos en \emph{terminales}.
+  Cuando Lucas se baja del avión lo hace en un terminal de inicio $S$.
+  Luego tiene que recorrer el aeropuerto hasta llegar a un terminal de destino
+  $T$ donde debe tomar el siguiente avión.
+  Los terminales dentro de un aeropuerto están conectados por caminos que pueden
+  ser recorridos caminando en ambos sentidos.
+  Después de tantos viajes Lucas ya conoce prácticamente todos los aeropuertos
+  y tiene un mapa de cada uno de estos con los caminos que hay entre terminales
+  junto con el tiempo que tarda en recorrerlos.
+
+  Muchas veces es imposible recorrer los aeropuertos solo caminando así que
+  estos ponen a disposición trenes entre algunos terminales.
+  Lucas también ha recolectado la información de estos trenes y tiene una tabla
+  de viajes con el momento exacto en que los trenes partirán de cada terminal y
+  el tiempo que tardarán en llegar al terminal de destino.
+
+  Dada la descripción de un aeropuerto, un terminal de inicio $S$ y uno de
+  destino $T$, a Lucas le gustaría saber el camino más corto para trasladarse
+  desde $S$ a $T$.
+  Lucas ya está cansado de perder vuelos.
+  ?`Podrías ayudarlo?
+\end{problemDescription}
+
+\begin{inputDescription}
+  La primera línea de la entrada contiene cuatro enteros $N$, $M$, $S$ y $T$
+  ($0 < N\leq 1000, 0 < M \leq 10000$, $1 \leq S, T\leq N$).
+  Los enteros $N$ y $M$ corresponden respectivamente a la cantidad de terminales
+  y de caminos en el aeropuerto.
+  Cada terminal es identificado con un número entre 1 y $N$.
+  Los enteros $S$ y $T$ corresponden respectivamente al terminal de inicio y de
+  destino.
+
+  Posteriormente cada una de las siguientes $M$ líneas contienen tres enteros
+  $a_i$, $b_i$ y $c_i$ indicando que existe un camino entre el terminal $a_i$ y
+  el terminal $b_i$ y que Lucas tarda $c_i$ minutos en recorrerlo.
+  Se garantiza que siempre será posible moverse entre cualquier par de
+  terminales usando solamente estos caminos.
+
+  A continuación sigue una línea con un entero $P$ ($0$) correspondiente a la
+  cantidad de entradas que contiene la tabla de viajes.
+  Cada una de las siguientes $P$ líneas contiene cuatro enteros $u_i$, $v_i$,
+  $t_i$ y $w_i$ describiendo un viaje en tren.
+  Los enteros indican que el tren viajará desde el terminal $u_i$ hasta el
+  terminal $v_i$, que partirá $t_i$ minutos después de que Lucas comienza su
+  recorrido y que este se demorará $w_i$ minutos en llegar al destino.
+\end{inputDescription}
+
+\begin{outputDescription}
+  La salida debe contener un solo entero correspondiente al tiempo mínimo en que
+  Lucas puede llegar desde $S$ a $T$.
+\end{outputDescription}
+
+\begin{scoreDescription}
+  \score{10} $P=0$ y el grafo es una línea.
+  \score{10} El grafo es una línea y los trenes siempre viajan entre terminales
+  consecutivos.
+  \score{10} $P$ = 0
+  \score{10} Sin restricciones adicionales.
+\end{scoreDescription}
+
+\begin{sampleDescription}
+\sampleIO{sample-1}
+\sampleIO{sample-2}
+\end{sampleDescription}
+
+\end{document}
