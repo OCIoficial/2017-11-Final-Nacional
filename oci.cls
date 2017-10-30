@@ -59,23 +59,22 @@
 
 %% TITLE
 \getenv[\@problem]{OCIMATIC_PROBLEM_NUMBER}
-\ifdefempty{\@problem}{\def\@problem{\texttt{<\hspace{0.5em}>}}}
+\ifdefempty{\@problem}{\def\@problem{\texttt{<\hspace{0.5em}>}}}{}
 
 \getenv[\@codename]{OCIMATIC_CODENAME}
-\ifdefempty{\@codename}{\def\@codename{<\hspace{4em}>}}
+\ifdefempty{\@codename}{\def\@codename{<\hspace{4em}>}}{}
 
 
 \newcommand{\mymaketitle}{
     \begin{center}
       {\huge\bf \sf Problema \@problem}\\
     \LARGE{\sf \@title}\\[2mm]
-    \normalsize {\em nombre clave:} {\tt \@codename}
+    \normalsize {\em nombre clave:} {\tt \detokenize\expandafter{\@codename}}
     \vspace{6pt}
     \end{center}
 }
 
 %% Sideness
-\def\@sideness{oneside}
 \getenv[\@sideness]{OCIMATIC_SIDENESS}
 
 \renewcommand*{\cleardoublepage}{
