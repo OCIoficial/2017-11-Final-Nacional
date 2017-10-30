@@ -31,10 +31,11 @@ void temporary_dijkstra(vector<vector<pair<int,int>> &graph, vector<int> &distan
 
 // modification of usual Dijkstra's algorithm to process the temporary edges
 		for(TE te : tes[u]) {
-			if(te.starting_time == distances[u]){
+			if(te.starting_time >= distances[u]){
 				int v = te.destiny;
-				if(distances[u] + te.length < distances[v]) {
-					distances[v] = distances[u] + te.length;
+								
+				if(te.starting_time + te.length +  < distances[v]) {
+					distances[v] = te.starting_time  + te.length;
 					pq.push({distances[v], v});
 				}
 			}
