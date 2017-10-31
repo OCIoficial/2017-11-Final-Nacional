@@ -17,19 +17,111 @@
   1 ; copy statement/sample-1.in
   1 ; copy statement/sample-2.in
 
-  # Manual test case
-  2 ; copy attic/manual-1.in
-
   # Random tests
-  3 ; random.cpp 10 100
-  3 ; random.cpp 100 1000
-
+  # Rand params: n    | k    | minX | maxX | minY | maxY
+  3 ; gen_random.py 0      1      0      0      0      0
+  3 ; gen_random.py 0      2      0      0      0      0
+  3 ; gen_random.py 0      3      0      0      0      0
+  3 ; gen_random.py 0      4      0      0      0      0
+  3 ; gen_random.py 0      5      0      0      0      0
+  3 ; gen_random.py 0      6      0      0      0      0
+  3 ; gen_random.py 0      7      0      0      0      0
+  3 ; gen_random.py 0      8      0      0      0      0
+  3 ; gen_random.py 0      9      0      0      0      0
+  3 ; gen_random.py 0     10      0      0      0      0
 
 [Subtask 2]
   # Random tests
-  1 ; random.java 10 20 30
-  1 ; random.java 20 30 40
+  # Rand params: n     | k     | minX | maxX | minY | maxY
+  3 ; gen_random.py 6      1      1      3      1      3
+  3 ; gen_random.py 7      1      1      3      1      3
+  3 ; gen_random.py 8      1      1      3      1      3
+  3 ; gen_random.py 9      1      1      4      1      4
+  3 ; gen_random.py 10     1      1      4      1      4
+  3 ; gen_random.py 6      2      1      3      1      3
+  3 ; gen_random.py 7      2      1      3      1      3
+  3 ; gen_random.py 8      2      1      3      1      3
+  3 ; gen_random.py 9      2      1      4      1      4
+  3 ; gen_random.py 10     2      1      4      1      4
+  3 ; gen_random.py 6      3      1      3      1      3
+  3 ; gen_random.py 7      3      1      3      1      3
+  3 ; gen_random.py 8      3      1      3      1      3
+  3 ; gen_random.py 9      3      1      4      1      4
+  3 ; gen_random.py 10     3      1      4      1      4
+  3 ; gen_random.py 6      4      1      3      1      3
+  3 ; gen_random.py 7      4      1      3      1      3
+  3 ; gen_random.py 8      4      1      3      1      3
+  3 ; gen_random.py 9      4      1      4      1      4
+  3 ; gen_random.py 10     4      1      4      1      4
+  3 ; gen_random.py 6      5      1      3      1      3
+  3 ; gen_random.py 7      5      1      3      1      3
+  3 ; gen_random.py 8      5      1      3      1      3
+  3 ; gen_random.py 9      5      1      4      1      4
+  3 ; gen_random.py 10     5      1      4      1      4
+  3 ; gen_random.py 6      6      1      3      1      3
+  3 ; gen_random.py 7      6      1      3      1      3
+  3 ; gen_random.py 8      6      1      3      1      3
+  3 ; gen_random.py 9      6      1      4      1      4
+  3 ; gen_random.py 10     6      1      4      1      4
+  3 ; gen_random.py 6      7      1      3      1      3
+  3 ; gen_random.py 7      7      1      3      1      3
+  3 ; gen_random.py 8      7      1      3      1      3
+  3 ; gen_random.py 9      7      1      4      1      4
+  3 ; gen_random.py 10     7      1      4      1      4
+  3 ; gen_random.py 6      8      1      3      1      3
+  3 ; gen_random.py 7      8      1      3      1      3
+  3 ; gen_random.py 8      8      1      3      1      3
+  3 ; gen_random.py 9      8      1      4      1      4
+  3 ; gen_random.py 10     8      1      4      1      4
+  3 ; gen_random.py 6      9      1      3      1      3
+  3 ; gen_random.py 7      9      1      3      1      3
+  3 ; gen_random.py 8      9      1      3      1      3
+  3 ; gen_random.py 9      9      1      4      1      4
+  3 ; gen_random.py 10     9      1      4      1      4
+  3 ; gen_random.py 6      10      1      3      1      3
+  3 ; gen_random.py 7      10      1      3      1      3
+  3 ; gen_random.py 8      10      1      3      1      3
+  3 ; gen_random.py 9      10      1      4      1      4
+  3 ; gen_random.py 10     10      1      4      1      4
 
-  # More random tests
-  2 ; random.py 1 1000
+[Subtask 3]
+  # Random tests
+  # Rand params: n     | k     | minX      | maxX      | minY | maxY 
+  3 ; gen_random.py 100   4001    1           100           0      100
+  3 ; gen_random.py 100   4011    1           100           0      100
+  3 ; gen_random.py 100   4021    1           100           0      100
+  3 ; gen_random.py 100   4031    1           100           0      100
+  3 ; gen_random.py 100   4041    1           100           0      100
+  3 ; gen_random.py 100   4051    1           100           0      50000
+  3 ; gen_random.py 100   4061    1           100           0      50000
+  3 ; gen_random.py 100   4071    1           50000         0      100
+  3 ; gen_random.py 100   4081    1           50000         0      100
+  3 ; gen_random.py 100   4091    1           100           0      100
+  3 ; gen_random.py 100   4500    1           100           0      100
+  3 ; gen_random.py 100   4500    1           100           0      100
+  3 ; gen_random.py 100   5000    1           100           0      100
+  3 ; gen_random.py 100   5000    1           100           0      100
+
+[Subtask 4 - validators/st4.cpp]
+  # Random tests
+  # Rand params: n     | k     | minX      | maxX      | minY      | maxY 
+  3 ; gen_random.py 10000   9000000000    1    75000    1    75000         
+  3 ; gen_random.py 10000   9000000011    1    75000    1    75000 
+  3 ; gen_random.py 10000   9000000021    1    75000    1    75000 
+  3 ; gen_random.py 10000   9000000031    1    75000    1    75000 
+  3 ; gen_random.py 10000   9000000041    1    75000    1    75000 
+  3 ; gen_random.py 10000   9000000051    1    75000    1    75000 
+  3 ; gen_random.py 10000   9000000061    1    75000    1    75000 
+  3 ; gen_random.py 10000   9000000071    1    75000    1    75000 
+  3 ; gen_random.py 10000   9000000081    1    75000    1    75000 
+  3 ; gen_random.py 10000   9000000091    1    75000    1    75000 
+  3 ; gen_random.py 10000   9000000500    1    75000    1    75000 
+  3 ; gen_random.py 10000   9000000500    1    75000    1    75000 
+  3 ; gen_random.py 10000   10000000000   1    75000    1    75000 
+  3 ; gen_random.py 10000   10000000000   1    75000    1    75000
+  3 ; gen_random.py 0       10000000000   1    75000    1    75000 
+  3 ; gen_random.py 0        9000060000   1    75000    1    75000 
+  3 ; gen_random.py 0       90000300000   1    75000    1    75000 
+  3 ; gen_random.py 0       80000500000   1    75000    1    75000 
+
 
