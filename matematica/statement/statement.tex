@@ -1,0 +1,54 @@
+\documentclass{oci}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+
+\title{La tarea de matemática}
+
+\begin{document}
+\begin{problemDescription}
+  Un fatídico día en que la profesora de matemática ya estaba aburrida de
+  hacer clases, no encontró mejor idea que dar como tarea escribir en el
+  cuaderno de uno a un millón.
+
+  Después de algunas horas escribiendo los alumnos comenzaron a darse cuenta que
+  la tarea era titánica.
+  ?`Cuántas hojas serían necesarias para escribir todos los números hasta un
+  millón?
+  ?`Entraría todo en un solo cuaderno?
+  O más aún, ?`sería siguiera posible escribir en el cuaderno hasta cien mil?
+
+  Un cuaderno clásico de cuadro grande tiene \textbf{28 cuadros a lo ancho y 35
+    a lo alto}.
+  Podemos suponer que en cada cuadro se escribe un solo dígito y que dos pares
+  de números consecutivos se separar con una coma que no ocupa espacio.
+  Por otro lado un número debe ser escrito en una sola línea y si no hay espacio
+  en la línea actual se deben dejar los cuadros restantes en blanco y partir en
+  la siguiente.
+
+  Dado un entero $N$ tu tarea es encontrar la cantidad de hojas necesarias para
+  escribir todos los números de 1 a $N$.
+\end{problemDescription}
+
+\begin{inputDescription}
+  La entrada corresponde a un único entero $N$ correspondiente al número hasta
+  el cuál se desea escribir.
+\end{inputDescription}
+
+\begin{outputDescription}
+  La salida debe con tener una única línea con un entero correspondiente a la
+  cantidad de hojas necesarias para escribir de 1 a $N$ siguiendo las reglas del
+  enunciado.
+\end{outputDescription}
+
+\begin{scoreDescription}
+  \score{0} Se probarán varios casos donde $0 < N < 10$.
+  \score{0} Se probarán varios casos donde $10 < N \leq 500$.
+  \score{0} Se probarán varios casos donde $500 < N \leq 1000000$.
+\end{scoreDescription}
+
+\begin{sampleDescription}
+\sampleIO{sample-1}
+\sampleIO{sample-2}
+\end{sampleDescription}
+
+\end{document}

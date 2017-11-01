@@ -59,17 +59,17 @@
 
 %% TITLE
 \getenv[\@problem]{OCIMATIC_PROBLEM_NUMBER}
-\ifdefempty{\@problem}{\def\@problem{\texttt{<\hspace{0.5em}>}}}{}
+\def\@theproblem{\ifdefempty{\@problem}{{\tt <\hspace{0.5em}>}}{\@problem}}
 
 \getenv[\@codename]{OCIMATIC_CODENAME}
-\ifdefempty{\@codename}{\def\@codename{<\hspace{4em}>}}{}
+\def\@thecodename{\ifdefempty{\@codename}{<\hspace{4em}>}{\detokenize\expandafter{\@codename}}}
 
 
 \newcommand{\mymaketitle}{
     \begin{center}
-      {\huge\bf \sf Problema \@problem}\\
+      {\huge\bf \sf Problema \@theproblem}\\
     \LARGE{\sf \@title}\\[2mm]
-    \normalsize {\em nombre clave:} {\tt \detokenize\expandafter{\@codename}}
+    \normalsize {\em nombre clave:} {\tt \@thecodename}
     \vspace{6pt}
     \end{center}
 }
