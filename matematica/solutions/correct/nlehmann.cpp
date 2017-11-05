@@ -24,24 +24,18 @@ int main() {
       digits += 1;
     }
     if (col + digits > 28) {
-      for (int j = 0; j < 28 - col; ++j)
-        cerr << "_";
       col = 0;
       row += 1;
-      cerr << "\n";
     }
     if (row == 35) {
       row = 0;
       pages += 1;
-      cerr << "--------------------\n";
     }
-    cerr << i << "|";
     col += digits;
   }
   if (row == 0 && col == 0)
     pages -= 1;
 
-  cerr << "\n\n\n";
   cout << pages << "\n";
 
   return 0;

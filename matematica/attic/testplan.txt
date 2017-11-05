@@ -1,39 +1,30 @@
-[Params]
-ST1 = list(range(10))
-
 [Subtask 1]
-  1 ; echo $ST1
-
-[Subtask 2]
-  1 ; echo 20
-  1 ; echo 40
-  1 ; echo 32   # primer número en completar exactamente una línea
+  1 ; echo 1
+  1 ; echo 10
   1 ; echo 100
-  1 ; echo 101
-  1 ; echo 353  # último número en la primera página
-  1 ; echo 354  # primer número en la segunda página
-  1 ; echo 448
-  1 ; echo 445
-  1 ; echo 500
-
-[Subtask 3]
-  1 ; echo 1231  # primer número en completar exactamente una página
-  1 ; echo 1232
-
-  1 ; echo 5358
-  1 ; echo 39908
-  1 ; echo 99595
-  1 ; echo 299988
-
-  1 ; echo 4906  # último número en su página
-  1 ; echo 4907
-
-  1 ; echo 996829  # último número en su página
-  1 ; echo 996830
-
-  1 ; echo 999910  # primer número de la última página
-
   1 ; echo 1000
   1 ; echo 10000
   1 ; echo 100000
   1 ; echo 1000000
+
+  # Casos de borde
+  2 ; echo 32   # primer número en completar exactamente una línea
+  2 ; echo 353  # último número en la primera página
+  2 ; echo 354  # primer número en la segunda página
+  2 ; echo 1231  # primer número en completar exactamente una página
+  2 ; echo 1232
+  2 ; echo 4906  # último número en su página
+  2 ; echo 4907
+  2 ; echo 996829  # último número en su página
+  2 ; echo 996830
+  2 ; echo 999910  # primer número de la última página
+
+  # Números aleatorios
+  3 ; echo 5358
+  3 ; echo 39908
+  3 ; echo 99595
+  3 ; echo 299988
+  3 ; echo 33333
+  3 ; echo 222
+  3 ; echo 929392
+  3 ; echo 5679

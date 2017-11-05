@@ -1,4 +1,5 @@
 \documentclass{oci}
+\usepackage{array}
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 
@@ -6,25 +7,26 @@
 
 \begin{document}
 \begin{problemDescription}
-  Un fatídico día en que la profesora de matemática ya estaba aburrida de
-  hacer clases, no encontró mejor idea que dar como tarea escribir en el
-  cuaderno de uno a un millón.
+  Un fatídico día en que la profesora de matemática ya estaba aburrida de hacer
+  clases, no encontró mejor idea que dar a sus alumnos la tarea de escribir en
+  el cuaderno de uno a un millón.
 
-  Después de algunas horas escribiendo los alumnos comenzaron a darse cuenta que
-  la tarea era titánica.
-  ?`Cuántas hojas serían necesarias para escribir todos los números hasta un
-  millón?
-  ?`Entraría todo en un solo cuaderno?
-  O más aún, ?`sería siguiera posible escribir en el cuaderno hasta cien mil?
+  Después de algunas horas escribiendo, los alumnos comenzaron a darse cuenta
+  que la tarea era titánica. ?`Cuántas hojas serían necesarias para escribir
+  todos los números hasta un millón? ?`Entraría todo en un solo cuaderno? O más
+  aún, ?`sería siguiera posible escribir en el cuaderno hasta cien mil?
 
   Un cuaderno clásico de cuadro grande tiene \textbf{28 cuadros a lo ancho y 35
-    a lo alto}.
-  Podemos suponer que en cada cuadro se escribe un solo dígito y que dos pares
-  de números consecutivos se separar con una coma que no ocupa espacio.
-  Por otro lado un número debe ser escrito en una sola línea y si no hay espacio
-  en la línea actual se deben dejar los cuadros restantes en blanco y partir en
-  la siguiente.
-
+    a lo alto}. Podemos suponer que en cada cuadro se escribe un solo dígito y
+  que dos pares de números consecutivos se separan con una coma que ocupa un tan
+  poco espacio que es despreciable. Por otro lado un número debe ser escrito en
+  una sola línea y si no queda espacio en la línea actual se deben dejar los
+  cuadros restantes en blanco y partir en la siguiente.
+  La siguiente figura muestra como quedaría la primera página si se llena con la
+  mayor cantidad de números posible.
+  \begin{center}
+  \input{table}
+  \end{center}
   Dado un entero $N$ tu tarea es encontrar la cantidad de hojas necesarias para
   escribir todos los números de 1 a $N$.
 \end{problemDescription}
@@ -36,19 +38,16 @@
 
 \begin{outputDescription}
   La salida debe contener una única línea con un entero correspondiente a la
-  cantidad de hojas necesarias para escribir de 1 a $N$ siguiendo las reglas del
-  enunciado.
+  cantidad de hojas necesarias para escribir de 1 a $N$ siguiendo las reglas
+  descritas en el enunciado.
 \end{outputDescription}
 
-\begin{scoreDescription}
-  \score{0} Se probarán varios casos donde $0 < N < 10$.
-  \score{0} Se probarán varios casos donde $10 < N \leq 500$.
-  \score{0} Se probarán varios casos donde $500 < N \leq 1000000$.
-\end{scoreDescription}
+\section*{Subtareas y puntaje}
+En este problema no hay subtareas. Se dará 4 puntos por cada caso de prueba
+correcto.
 
 \begin{sampleDescription}
-\sampleIO{sample-1}
-\sampleIO{sample-2}
+  \sampleIO{sample-1} \sampleIO{sample-2} \sampleIO{sample-3}
 \end{sampleDescription}
 
 \end{document}
