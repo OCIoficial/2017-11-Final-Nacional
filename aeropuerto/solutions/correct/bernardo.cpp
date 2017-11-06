@@ -44,22 +44,23 @@ struct TE {
 
 int main() {
 	int N, M, S, T; cin >> N >> M >> S >> T;
-	
+	--S; --T;
 // Graph building
 	vector<vector<pair<int, int>>> graph(N, vector<pair<int,int>>());	
 
 	for(int  i = 0; i < M; ++i) {
 		int a, b, c;
-		cin >> a >> b >> c;
+		cin >> a >> b >> c; --a;--b;
 		graph[a].push_back({b, c});
 		graph[b].push_back({a, c});
 	}	
 
 // Temporary edges
-	vector<vector<TE>> tes;
+	vector<vector<TE>> tes(N, vector<TE>());
 	int P; cin >> P;
 	for(int i = 0; i < P; ++i){
-		int u, v, t, w;	
+		int u, v, t, w; cin >> u >> v >> t >> w;	
+		--u; --v;
 		TE temporary_edge(u, v, t, w);
 		tes[u].push_back(temporary_edge);
 	}
