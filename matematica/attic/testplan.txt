@@ -1,35 +1,30 @@
-# This is a sample test plan.
-# Every line specifies a command to generate a test case.
-# The first column specifies a group name.
-# The second column specifies a command to generate the test case, it could be
-# either a `copy` command or a generator with its respective arguments.
-# A `copy` command expects a path to a file relatively to the task root.
-# A generator could be a source file in Java, C++ or Python, which is compiled
-# and executed with the specified arguments.
-# Additionally, an argument which is different for every test case, is passed
-# at the beginning. Arguments should be used to generate a uniquely random seed
-# inside the generator.
-# To generate test cases using test plan use `ocimatic gen-input`
-
-
 [Subtask 1]
-  # Use sample data as test
-  1 ; copy statement/sample-1.in
-  1 ; copy statement/sample-2.in
+  1 ; echo 1
+  1 ; echo 10
+  1 ; echo 100
+  1 ; echo 1000
+  1 ; echo 10000
+  1 ; echo 100000
+  1 ; echo 1000000
 
-  # Manual test case
-  2 ; copy attic/manual-1.in
+  # Casos de borde
+  2 ; echo 353  # último número en la primera página
+  2 ; echo 354
+  2 ; echo 1231  # primer número en completar exactamente una página
+  2 ; echo 1232
+  2 ; echo 4906  # último número en su página
+  2 ; echo 4907
+  2 ; echo 996829  # último número en su página
+  2 ; echo 996830
+  2 ; echo 999909
+  2 ; echo 999910  # primer número de la última página
 
-  # Random tests
-  3 ; random.cpp 10 100
-  3 ; random.cpp 100 1000
-
-
-[Subtask 2]
-  # Random tests
-  1 ; random.java 10 20 30
-  1 ; random.java 20 30 40
-
-  # More random tests
-  2 ; random.py 1 1000
-
+  # Números aleatorios
+  3 ; echo 5358
+  3 ; echo 39908
+  3 ; echo 99595
+  3 ; echo 299988
+  3 ; echo 33333
+  3 ; echo 222
+  3 ; echo 929392
+  3 ; echo 5679

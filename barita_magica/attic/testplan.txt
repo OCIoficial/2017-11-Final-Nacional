@@ -1,35 +1,39 @@
-# This is a sample test plan.
-# Every line specifies a command to generate a test case.
-# The first column specifies a group name.
-# The second column specifies a command to generate the test case, it could be
-# either a `copy` command or a generator with its respective arguments.
-# A `copy` command expects a path to a file relatively to the task root.
-# A generator could be a source file in Java, C++ or Python, which is compiled
-# and executed with the specified arguments.
-# Additionally, an argument which is different for every test case, is passed
-# at the beginning. Arguments should be used to generate a uniquely random seed
-# inside the generator.
-# To generate test cases using test plan use `ocimatic gen-input`
+[Params]
+import os, glob, random
+random.seed(hash('varita_magica'))
 
+categories = {}
+for path in glob.glob('attic/cases/txt/*/*.txt'):
+    category = os.path.basename(os.path.dirname(path))
+    categories.setdefault(category, []).append(os.path.abspath(path))
+
+for paths in categories.values():
+    random.shuffle(paths)
+
+ST1 = []
+ST2 = []
+ST3 = []
+for category, paths in categories.items():
+    idx = 0
+    if int(category) <= 1:
+        ST1.extend(paths[idx:idx+20])
+        idx += 20
+    if int(category) <= 4:
+        ST2.extend(paths[idx:idx+15])
+        idx += 15
+    ST3.extend(paths[idx:idx+15])
+
+random.shuffle(ST1)
+random.shuffle(ST2)
+random.shuffle(ST3)
 
 [Subtask 1]
-  # Use sample data as test
-  1 ; copy statement/sample-1.in
-  1 ; copy statement/sample-2.in
-
-  # Manual test case
-  2 ; copy attic/manual-1.in
-
-  # Random tests
-  3 ; random.cpp 10 100
-  3 ; random.cpp 100 1000
+  1 ; copy $ST1
 
 
 [Subtask 2]
-  # Random tests
-  1 ; random.java 10 20 30
-  1 ; random.java 20 30 40
+  1 ; copy $ST2
 
-  # More random tests
-  2 ; random.py 1 1000
 
+[Subtask 3]
+  1 ; copy $ST3
