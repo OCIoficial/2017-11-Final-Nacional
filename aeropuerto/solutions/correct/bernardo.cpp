@@ -10,19 +10,19 @@ struct TE {
 };
 
 // Temporary dijkstra method
-void temporary_dijkstra(vector<vector<pair<int,int>> &graph, vector<int> &distances, 
-					vector<vector<temporary_edge>> &tes, int start) {
-	distnces[start] = 0; 
+	void temporary_dijkstra(vector<vector<pair<int,int>>> &graph, vector<int> &distances, 
+					vector<vector<TE>> &tes, int start) {
+	distances[start] = 0; 
         priority_queue<pair<int,int>> pq;
 	pq.push({0,start});
 	while(!pq.empty()){
-		pair<int, int> p = pq.top(); p.pop();
-		u = p.second; priority = p.first;
-		if(priority != distance[u]) {
+		pair<int, int> p = pq.top(); pq.pop();
+		int u = p.second; int  priority = p.first;
+		if(priority != distances[u]) {
 			continue;	
 		}
 		for(pair<int, int>  par : graph[u]){
-			int u = pair.first; int w = pair.second;
+			int v = par.first; int w = par.second;
 			if(distances[u] + w < distances[v]){
 				distances[v] = distances[u] + w;
 				pq.push({distances[v], v});
@@ -32,9 +32,8 @@ void temporary_dijkstra(vector<vector<pair<int,int>> &graph, vector<int> &distan
 // modification of usual Dijkstra's algorithm to process the temporary edges
 		for(TE te : tes[u]) {
 			if(te.starting_time >= distances[u]){
-				int v = te.destiny;
-								
-				if(te.starting_time + te.length +  < distances[v]) {
+				int v = te.destiny;				
+				if(te.starting_time + te.length  < distances[v]) {
 					distances[v] = te.starting_time  + te.length;
 					pq.push({distances[v], v});
 				}
@@ -57,7 +56,7 @@ int main() {
 	}	
 
 // Temporary edges
-	vector<vector<temporary_edge>> tes;
+	vector<vector<TE>> tes;
 	int P; cin >> P;
 	for(int i = 0; i < P; ++i){
 		int u, v, t, w;	
