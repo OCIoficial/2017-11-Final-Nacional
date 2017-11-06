@@ -6,7 +6,7 @@ outcome = subprocess.run(['convert', sys.argv[1], 'txt:-'], stdout=subprocess.PI
 
 regex = re.compile('(\d+),(\d+): \(\d+,\d+,\d+,(\d+)\) ')
 
-matrix = [[0 for x in range(50)] for y in range(50)]
+matrix = [[0 for x in range(64)] for y in range(64)]
 for line in outcome.stdout.split('\n'):
     m = regex.match(line)
     if m:
