@@ -29,7 +29,7 @@ long pointsInCircle(long long R) {
 int emptyPoints(long long R) {
   int l = 0, r = not_meblins.size();
   while(l < r) {
-    int m = l + (r - l)/2;
+    int m = (l + r)/2;
     if (norm2(not_meblins[m]) <= R * R)
       l = m + 1;
     else
@@ -55,7 +55,7 @@ int main() {
 
   int l = 0, r = 200000;
   while (l < r) {
-    int m = l + (r - l)/2;
+    int m = (l + r)/2;
     if (pointsInCircle(m) - emptyPoints(m) < K)
       l = m + 1;
     else

@@ -49,7 +49,7 @@ public class Main {
 			
 		}
 		for (int i = 0; i < n; i++) {
-			if (x[i] * x[i] + y[i] * y[i] <= r)
+			if (x[i] * x[i] + y[i] * y[i] <= r * r)
 				ans--;
 		}
 		return ans - 1;
