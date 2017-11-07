@@ -26,12 +26,12 @@ def forward_pass(x,W,b,U,c,V,d):
 
 import sys
 
-W = np.loadtxt('solutions/partial/W')
-b = np.loadtxt('solutions/partial/b')
-U = np.loadtxt('solutions/partial/U')
-c = np.loadtxt('solutions/partial/c')
-V = np.loadtxt('solutions/partial/V')
-d = np.loadtxt('solutions/partial/d')
+W = np.loadtxt('solutions/partial/W_100')
+b = np.loadtxt('solutions/partial/b_100')
+U = np.loadtxt('solutions/partial/U_100')
+c = np.loadtxt('solutions/partial/c_100')
+V = np.loadtxt('solutions/partial/V_100')
+d = np.loadtxt('solutions/partial/d_100')
 
 matrix = [[int(v) for v in line.split()] for line in sys.stdin]
 

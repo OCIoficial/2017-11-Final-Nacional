@@ -25,10 +25,14 @@ def load_data():
     return X, Y
 
 def gen_examples(X_tot, Y_tot, examples):
-
-    indexes = np.random.randint(0, X_tot.shape[0], examples)
-    
-    return X_tot[indexes], Y_tot[indexes]
+    """We assume 10 classes with the same number of examples and we select #examples/10 for each class"""
+    N = X_tot.shape[0]
+    M = int(N/10)
+    epc = int(examples/10)
+    indexes = []
+    for c in range(10):
+        indexes.append(np.random.randint(M*c, M*(c+1), epc))
+    return X_tot[np.concatenate(indexes)], Y_tot[np.concatenate(indexes)]
 
 def softmax(x,axis=0):
     """Compute softmax values for each sets of scores in x with respect to some axis (default 0)."""
@@ -75,10 +79,10 @@ X_tot , Y_tot = load_data()
 n_f = 64*64
 n_c = 10
 
-hidden = 10
+hidden = 15
 
-lr = 0.1
-epochs = 300
+lr = 0.03
+epochs = 1000
 
 n0 = n_f
 n1 = hidden
@@ -194,6 +198,11 @@ print("Accuracy: {0:.2f} \r".format(acc/X_tot.shape[0]))
 # save parameters
 # W,b,U,c,V,d:
 
+parameter_names = [('W',W),('b',b),('U',U),('c',c),('V',V),('d',d)]
+
+print('saving parameters...')
+for (n,p) in parameter_names:
+    np.savetxt(n+'_'+examples,p)
 # np.savetxt('W',W)
 # np.savetxt('b',b)
 # np.savetxt('U',U)
