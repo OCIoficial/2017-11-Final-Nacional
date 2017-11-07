@@ -52,6 +52,6 @@ public class Main {
 			if (x[i] * x[i] + y[i] * y[i] <= r)
 				ans--;
 		}
-		return ans;
+		return ans - 1;
 	}
 }

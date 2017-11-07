@@ -19,19 +19,18 @@ long long norm2(pair<int, int> p) {
   return ((long long) p.first)*p.first + ((long long) p.second)*p.second;
 }
 
-long pointsInCircle(int R) {
+long pointsInCircle(long long R) {
   long long points = 0;
-  for (int r = -R; r <= R; ++r)
+  for (long long r = -R; r <= R; ++r)
     points += floor(sqrt(R*R - r*r));
   return 2*(points + R);
 }
 
-int emptyPoints(int R) {
-  auto R2 = ((long long) R) * R;
+int emptyPoints(long long R) {
   int l = 0, r = not_meblins.size();
   while(l < r) {
     int m = l + (r - l)/2;
-    if (norm2(not_meblins[m]) <= R2)
+    if (norm2(not_meblins[m]) <= R * R)
       l = m + 1;
     else
       r = m;
@@ -40,7 +39,8 @@ int emptyPoints(int R) {
 }
 
 int main() {
-  int N, K;
+  int N;
+  long long K;
   cin >> N >> K;
 
   not_meblins.resize(N);
