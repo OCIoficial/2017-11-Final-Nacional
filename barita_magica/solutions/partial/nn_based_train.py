@@ -26,7 +26,7 @@ def load_data():
 
 def gen_examples(X_tot, Y_tot, examples):
 
-    indexes = np.random.randint(0, 2700, examples)
+    indexes = np.random.randint(0, X_tot.shape[0], examples)
     
     return X_tot[indexes], Y_tot[indexes]
 
@@ -44,16 +44,6 @@ def dsigmoid(x):
     """Compute the derivative of sigmoid function for each element in array x."""
     return sigmoid(x) * (1 - sigmoid(x))
 
-def gen_random_examples(n_features,n_classes,n_examples,low=0,high=2,dtype=np.int):
-    """
-    Produces random examples of sizes (n_features,n_examples) and (n_classes,n_examples) 
-    x[0] first example, y[0] first (one-hot) label
-    """
-    X = np.random.randint(low,high,size=(n_examples,n_features),dtype=dtype)
-    indexes = np.random.randint(0,n_classes,n_examples)
-    Y = np.eye(n_classes)[indexes] # select the one-hot vectors corresponding to indexes
-    return X, Y 
-
 def rand_init(dim_1,dim_2=None,m=1):
     return rand_init_2(dim_1,dim_2,m) if dim_2 != None else rand_init_1(dim_1,m)  
 
@@ -62,6 +52,7 @@ def rand_init_2(dim_1,dim_2,m=1):
 
 def rand_init_1(dim_1,m=1):
     return np.random.uniform(-m,m,size=(dim_1,))
+
 
 
 def forward_pass(x,W,b,U,c,V,d):
@@ -186,7 +177,7 @@ print()
 # loss
 L = 0
 acc = 0
-for i in range(2700):  
+for i in range(X_tot.shape[0]):  
     x = X_tot[i]
     t = Y_tot[i]
 
@@ -199,15 +190,15 @@ for i in range(2700):
     if pred == real:
         acc += 1
 
-print("Accuracy: {0:.2f} \r".format(acc/2700))
+print("Accuracy: {0:.2f} \r".format(acc/X_tot.shape[0]))
 # save parameters
 # W,b,U,c,V,d:
 
-np.savetxt('W',W)
-np.savetxt('b',b)
-np.savetxt('U',U)
-np.savetxt('c',c)
-np.savetxt('V',V)
-np.savetxt('d',d)
+# np.savetxt('W',W)
+# np.savetxt('b',b)
+# np.savetxt('U',U)
+# np.savetxt('c',c)
+# np.savetxt('V',V)
+# np.savetxt('d',d)
 
 
