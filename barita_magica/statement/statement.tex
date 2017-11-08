@@ -9,9 +9,9 @@
 \begin{document}
 \begin{problemDescription}
 Una de las más importantes tareas de la 
-Academia de Código y Magia (ACM) es entrenar a los futuros magos.
-El entrenamiento empieza desde que los aprendices son muy pequeños. 
-Por las razones obvias, no es seguro entregarle una varita mágica a aprendices sin experiencia
+Academia de Código y Magia (ACM) es entrenar a los futuros magos, y 
+el entrenamiento empieza desde que los aprendices son muy pequeños. 
+Por las razones obvias, no es seguro entregarle una varita mágica a aprendices sin experiencia,
 por lo que la ACM quiere implementar una \emph{App} donde puedan practicar hechizos
 de manera segura. La idea es que los pequeños dibujen en su celular o tablet 
 el movimiento que harían con una varita mágica y la App mostrará el resultado del hechizo en cuestión.
@@ -46,7 +46,7 @@ La ACM ya ha programado la parte de la \emph{App} que convierte los dibujos de
 los aprendices en una matriz de 0's y 1's, donde los 1's indican el trazo
 dibujado (mirar la sección de ejemplos más abajo).
 Tu misión es hacer un programa que tome una de estas matrices como entrada y
-genere un número del $0$ al $9$ que identifique a que hechizo corresponde el
+genere un número del $0$ al $9$ que identifique a qué hechizo corresponde el
 dibujo.
 
 Debes notar que estos dibujos no serán perfectos. 
@@ -69,7 +69,7 @@ hechizo al que corresponde el dibujo.
 
 \section*{Subtareas y puntaje}
 En este problema se probarán tres subtareas.
-El puntaje obtenido en casa subtarea dependerá de la cantidad de dibujos para
+El puntaje obtenido en cada subtarea dependerá de la cantidad de dibujos para
 los cuales tu programa retorna una respuesta correcta.
 Específicamente el puntaje dependerá del porcentaje $P$ de respuestas correctas
 para esa subtarea.
@@ -78,29 +78,29 @@ para esa subtarea.
   \itemsep 0pt
   \score{10} Se probarán varios casos en donde se asegura que los dibujos
   corresponden solo a hechizos de tipo $0$ o $1$.
-  Para obtener puntaje mayor a $0$ en esta subtarea debes responder
+  Para obtener puntaje mayor a $0$ en esta subtarea, debes responder
   correctamente al menos el 50\% de los casos.
-  Es decir, si el porcentaje $P$ de respuestas correctas es menor o igual que 50
+  Es decir, si el porcentaje $P$ de respuestas correctas es menor o igual que 50,
   obtendrás 0 puntos.
-  Si $P > 50$ obtendrás puntaje según la siguiente fórmula: $10\times(P-50)/50$
+  Si $P > 50$ obtendrás puntaje según la siguiente fórmula: $10\times(P-50)/50$.
    
   \score{30} Se probarán varios casos en donde se asegura que los dibujos
   corresponden a hechizos sólo del tipo $0$ al tipo $4$.
-  Si el porcentaje $P$ de respuestas correctas es menor que 20 obtendrás 0 puntos.
-  Si $P > 20$ obtendrás puntaje según la siguiente fórmula: $30\times(P-30)/30$.
+  Si el porcentaje $P$ de respuestas correctas es menor que 20, obtendrás 0 puntos.
+  Si $P > 20$ obtendrás puntaje según la siguiente fórmula: $30\times(P-20)/80$.
   
   \score{60} Se probarán varios casos que pueden corresponder a cualquier tipo
   de hechizo.
-  Si el porcentaje $P$ de respuestas correctas es menor o igual que 10 obtendrás
+  Si el porcentaje $P$ de respuestas correctas es menor o igual que 10, obtendrás
   0 puntos.
-  Si $P > 10$ obtendrás puntaje según la siguiente fórmula: $60\times(P-60)/60$.
+  Si $P > 10$ obtendrás puntaje según la siguiente fórmula: $60\times(P-10)/90$.
 \end{description}
 
 \begin{sampleDescription}
-  Para este problema se ha subido al sistema un archivo comprimido con algunos
+  Para este problema se ha subido al sistema un archivo comprimido con varios
   ejemplos de entrada y salida.
   El archivo podrá descargarse en la sección de descripción del problema dentro
-  del apartado attachments.
+  del apartado \emph{attachments}.
   Al descomprimir el archivo te encontrarás con la siguiente estructura.
 
   \dirtree{%
@@ -110,11 +110,13 @@ para esa subtarea.
     .3 1.txt.
     .3 2.png.
     .3 2.txt.
+    .3 ....
     .2 hechizo-1.
     .3 1.png.
     .3 1.txt.
     .3 2.png.
     .3 2.txt.
+    .3 ....
     .2 hechizo-3.
     .3 ....
     .2 ....
@@ -122,7 +124,7 @@ para esa subtarea.
 
   Los archivos están separados en carpetas según al hechizo correspondiente.
   Es decir, los archivos en la carpeta {\tt hechizo-0} son ejemplos de dibujos
-  correspondientes a hechizos del tipo 0, los en la carpeta {\tt hechizo-1} a
+  correspondientes a hechizos del tipo 0, los archivos en la carpeta {\tt hechizo-1} a
   hechizos del tipo 1, etc.
   Para cada ejemplo se provee una imagen junto a un archivo de texto
   correspondiente a la matriz de 0's y 1's para esta imagen.
