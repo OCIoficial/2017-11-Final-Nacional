@@ -17,6 +17,7 @@ seed(hash(sys.argv[1]))
 
 max_n = int(sys.argv[2])
 train_case = int(sys.argv[3])
+allow_s_eq_t = int(sys.argv[4])
 
 n = max_n
 m = n - 1
@@ -24,7 +25,10 @@ p = 0 if train_case == 0 else 1
 
 nodes = shuffled(n) # Shuffle node labels
 s = randint(0, n - 1)
-t = randint(0, n - 1)
+while True:
+  t = randint(0, n - 1)
+  if allow_s_eq_t or s != t:
+    break
 if s > t:
   s, t = t, s
 
