@@ -10,11 +10,11 @@ done
 
 for f in imagenes_iniciales/*.png;
 do
-    for i in 3 6 9 357 354 351 360
+    for i in 3 6 357 354 360
     do
-        for x in -4 -2 0 2 4
+        for x in -3 0 2
         do
-            for y in -4 -2 0 2 4
+            for y in -2 0 3
             do
                 filename=$(basename "$f")
                 extension="${filename##*.}"

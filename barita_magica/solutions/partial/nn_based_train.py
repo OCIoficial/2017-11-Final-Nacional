@@ -92,7 +92,7 @@ nf = n_c
 # generate random examples
 #X, Y = gen_random_examples(n0, nf, examples)
 
-examples = 100
+examples = 10
 
 X, Y = gen_examples(X_tot, Y_tot, examples)
 print(X.shape)
@@ -197,17 +197,9 @@ for i in range(X_tot.shape[0]):
 print("Accuracy: {0:.2f} \r".format(acc/X_tot.shape[0]))
 # save parameters
 # W,b,U,c,V,d:
-
 parameter_names = [('W',W),('b',b),('U',U),('c',c),('V',V),('d',d)]
-
 print('saving parameters...')
 for (n,p) in parameter_names:
-    np.savetxt(n+'_'+examples,p)
-# np.savetxt('W',W)
-# np.savetxt('b',b)
-# np.savetxt('U',U)
-# np.savetxt('c',c)
-# np.savetxt('V',V)
-# np.savetxt('d',d)
+    np.savetxt(n+'_'+str(examples),p)
 
 
