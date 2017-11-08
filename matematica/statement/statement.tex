@@ -2,6 +2,7 @@
 \usepackage{array}
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
+\usepackage{colortbl}
 
 \title{La tarea de matemática}
 
@@ -9,36 +10,37 @@
 \begin{problemDescription}
   Un fatídico día en que la profesora de matemática ya estaba aburrida de hacer
   clases, no encontró mejor idea que dar a sus alumnos la tarea de escribir en
-  el cuaderno de uno a un millón.
+  el cuaderno los números del uno al un millón.
 
-  Después de algunas horas escribiendo, los alumnos comenzaron a darse cuenta
+  Después de algunas horas escribiendo, los alumnos notaron
   que la tarea era titánica. ?`Cuántas hojas serían necesarias para escribir
-  todos los números hasta un millón? ?`Entraría todo en un solo cuaderno? O más
-  aún, ?`sería siguiera posible escribir en el cuaderno hasta cien mil?
+  todos los números hasta un millón? ?`Entraría todo en un solo cuaderno? 
+  ?`Sería siquiera posible escribir en el cuaderno hasta cien mil?
 
   Un cuaderno clásico de cuadro grande tiene \textbf{28 cuadros a lo ancho y 35
     a lo alto}. Podemos suponer que en cada cuadro se escribe un solo dígito y
-  que dos pares de números consecutivos se separan con una coma que ocupa un tan
-  poco espacio que es despreciable. Por otro lado un número debe ser escrito en
-  una sola línea y si no queda espacio en la línea actual se deben dejar los
-  cuadros restantes en blanco y partir en la siguiente.
-  La siguiente figura muestra como quedaría la primera página si se llena con la
+  que dos números consecutivos se separan con una coma (que ocupa tan
+  poco espacio que es despreciable). Por otro lado un número debe ser escrito completo en
+  una sola línea. Si no queda espacio en la línea actual se deben dejar los
+  cuadros restantes en blanco y continuar en la siguiente línea (o página).
+  La siguiente figura muestra cómo quedaría la primera página si se llena con la
   mayor cantidad de números posible.
+  
   \begin{center}
   \input{table}
   \end{center}
-  Dado un entero $N$ tu tarea es encontrar la cantidad de hojas necesarias para
-  escribir todos los números de 1 a $N$.
+  
+  Dado un entero $N$, tu tarea es encontrar la cantidad de páginas necesarias para
+  escribir todos los números desde el 1 hasta el $N$.
 \end{problemDescription}
 
 \begin{inputDescription}
-  La entrada corresponde a un único entero $N$ correspondiente al número hasta
-  el cuál se desea escribir.
+  La entrada corresponde a un único entero $N$, tal que $N$ es mayor o igual a $1$ y menor o igual a $1.000.000$. 
 \end{inputDescription}
 
 \begin{outputDescription}
   La salida debe contener una única línea con un entero correspondiente a la
-  cantidad de hojas necesarias para escribir de 1 a $N$ siguiendo las reglas
+  cantidad de páginas necesarias para escribir todos los números del 1 al $N$ siguiendo las reglas
   descritas en el enunciado.
 \end{outputDescription}
 
