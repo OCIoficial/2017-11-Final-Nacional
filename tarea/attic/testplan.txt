@@ -1,4 +1,5 @@
-[Subtask 1]
+
+[Subtask 1 - validators/st1.cpp]
   1 ; echo 1
   1 ; echo 10
   1 ; echo 100
@@ -8,16 +9,21 @@
   1 ; echo 1000000
 
   # Casos de borde
-  2 ; echo 353  # último número en la primera página
+  # último número en la primera página
+  2 ; echo 353
   2 ; echo 354
-  2 ; echo 1231  # primer número en completar exactamente una página
+  # primer número en completar exactamente una página
+  2 ; echo 1231
   2 ; echo 1232
-  2 ; echo 4906  # último número en su página
+  # último número en su página
+  2 ; echo 4906
   2 ; echo 4907
-  2 ; echo 996829  # último número en su página
+  # último número en su página
+  2 ; echo 996829
   2 ; echo 996830
+  # primer número de la última página
+  2 ; echo 999910
   2 ; echo 999909
-  2 ; echo 999910  # primer número de la última página
 
   # Números aleatorios
   3 ; echo 5358
