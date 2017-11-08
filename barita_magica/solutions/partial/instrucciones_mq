@@ -1,6 +1,9 @@
 1. se asume que existen los archivos ./txt/{0..9}/*.txt, ej: "./txt/0/0_1.txt",
    donde 0_1.txt es un caso de prueba (si no, modificar test_sol_mq.sh)
 
+   (el directorio definido por {0..9} indica el label del archivo, ej. ./txt/0/0_1.txt
+   indica que la clase de 0_1.txt es la 0 (el nombre del .txt da lo mismo)
+
 2. ejecutar test_sol_mq.sh; éste genera el archivo sol_mq.out
 
 3. ejecutar python metrics_mq.py sol_mq.out; éste genera el accuracy por clase a partir de sol_mq.out
