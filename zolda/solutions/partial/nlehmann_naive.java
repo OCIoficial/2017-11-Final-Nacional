@@ -28,7 +28,7 @@ public class nlehmann_naive {
 
         st = new StringTokenizer(in.readLine());
         int N = Integer.parseInt(st.nextToken());
-        int K = Integer.parseInt(st.nextToken());
+        long K = Long.parseLong(st.nextToken());
 
         for (int i = 0; i < N; ++i) {
             st = new StringTokenizer(in.readLine());
