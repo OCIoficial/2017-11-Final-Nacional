@@ -74,12 +74,12 @@
   # Random tests   n m p t
   2 ; generator.py 20 19 400 8000
   2 ; generator.py 100 99 10000 40000
-  2 ; generator.py 1000 999 100000 400000
+  2 ; generator.py 1000 999 10000 400000
   2 ; generator.py 10 9 100 1000
-  2 ; generator.py 100 99 10000 10000
-  2 ; generator.py 1000 999 100000 100000
+  2 ; generator.py 100 99 1000 10000
+  2 ; generator.py 1000 999 10000 100000
   2 ; generator.py 10 23 230 4000
   2 ; generator.py 32 160 1600 12000
   2 ; generator.py 100 1000 10000 40000
-  2 ; generator.py 200 10000 100000 1000000000
+  2 ; generator.py 200 10000 10000 1000000000
 

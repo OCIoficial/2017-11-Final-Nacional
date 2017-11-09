@@ -67,7 +67,7 @@ int main() {
     inf.readEoln();
 
     ensuref(u != v, "No puede haber conexiones entre un terminal y si mismo");
-    ensuref(v == u+1 || u == v+1, "Las conexiones deben formar una línea");
+    ensuref(v == u+1 || u == v + 1, "Las conexiones deben formar una línea");
     ensuref(edges.count({u, v}) == 0, "No puede haber aristas repetidas");
     ensuref(edges.count({v, u}) == 0, "No puede haber aristas repetidas");
     edges.emplace(u,v);
@@ -91,6 +91,7 @@ int main() {
     inf.readEoln();
 
     ensuref(u != v, "No puede haber trenes entre un terminal y si mismo");
+    ensuref(v == u+1 || u == v + 1, "Los trenes tienen que estar entre terminales consecutivos");
   }
 
   inf.readEof();

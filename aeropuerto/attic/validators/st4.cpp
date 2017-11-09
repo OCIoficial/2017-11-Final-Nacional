@@ -12,8 +12,10 @@
 #include <set>
 #include <vector>
 #include <queue>
+#include <tuple>
 using namespace std;
 typedef pair<int,int> edge;
+typedef tuple<int,int,int> train;
 
 bool check_conn(vector<vector<int>> &A) 
 {
@@ -79,6 +81,7 @@ int main() {
   int P = inf.readInt(0, 10000, "P");
   inf.readEoln();
 
+  set<train> trains;
   for (int i = 0; i < P; ++i) {
     int u = inf.readInt(1, N, "u");
     inf.readSpace();
@@ -90,6 +93,7 @@ int main() {
     inf.readEoln();
 
     ensuref(u != v, "No puede haber trenes entre un terminal y si mismo");
+    ensuref(trains.count({u, v, t}) == 0, "No puede haber trenes al mismo horario");
   }
 
   inf.readEof();
