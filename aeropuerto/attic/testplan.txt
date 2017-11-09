@@ -97,6 +97,7 @@
   2 ; generator.py 32 160 1600 12000
   2 ; generator.py 100 1000 10000 40000
   2 ; generator.py 200 10000 10000 1000000000
+  2 ; generator.py 3000 30000 30000 100000
 
   # Bernardo case
   3 ; exp.py 989 13
