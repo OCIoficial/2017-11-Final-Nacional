@@ -44,9 +44,9 @@ bool check_conn(vector<vector<int>> &A)
 
 int main() {
   registerValidation();
-  int N = inf.readInt(1, 1000, "N");
+  int N = inf.readInt(2, 3000, "N");
   inf.readSpace();
-  int M = inf.readInt(1, 10000, "M");
+  int M = inf.readInt(1, 30000, "M");
   inf.readSpace();
 
   // check connectivity
@@ -78,7 +78,7 @@ int main() {
 
   ensuref(check_conn(G), "El grafo debe ser conexo");
 
-  int P = inf.readInt(0, 10000, "P");
+  int P = inf.readInt(0, 30000, "P");
   inf.readEoln();
 
   set<train> trains;
