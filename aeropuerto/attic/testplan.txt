@@ -20,9 +20,9 @@
   2 ; generator_line.py 5 0 1
   2 ; generator_line.py 2 0 0
   2 ; generator_line.py 5 0 0
-  2 ; generator_line.py 10 0 0
-  2 ; generator_line.py 100 0 0
-  2 ; generator_line.py 1000 0 0
+  2 ; generator_line.py 50 0 0
+  2 ; generator_line.py 500 0 0
+  2 ; generator_line.py 3000 0 0
 
 
 [Subtask 2 - validators/st2.cpp]
@@ -35,8 +35,6 @@
   2 ; generator_line.py 2 2 0
   2 ; generator_line.py 2 3 0
   2 ; generator_line.py 2 4 0
-  2 ; generator_line.py 10 3 0
-  2 ; generator_line.py 20 3 0
   2 ; generator_line.py 50 2 0
   2 ; generator_line.py 50 3 0
   2 ; generator_line.py 50 4 0
@@ -45,6 +43,8 @@
   2 ; generator_line.py 500 3 0
   2 ; generator_line.py 1000 3 0
   2 ; generator_line.py 1000 4 0
+  2 ; generator_line.py 3000 3 0
+  2 ; generator_line.py 3000 4 0
 
 
 [Subtask 3 - validators/st3.cpp]
@@ -56,15 +56,30 @@
   2 ; generator.py 10 9 0 0
   2 ; generator.py 100 99 0 0
   2 ; generator.py 1000 999 0 0
+  2 ; generator.py 3000 2999 0 0
   2 ; generator.py 10 18 0 0
   2 ; generator.py 100 198 0 0
   2 ; generator.py 1000 1998 0 0
+  2 ; generator.py 3000 5998 0 0
   2 ; generator.py 10 25 0 0
   2 ; generator.py 100 500 0 0
   2 ; generator.py 1000 10000 0 0
+  2 ; generator.py 3000 42500 0 0
   2 ; generator.py 10 45 0 0
   2 ; generator.py 32 496 0 0
   2 ; generator.py 100 4949 0 0
+
+  # Bernardo case
+  3 ; exp.py 989 13
+  3 ; exp.py 991 11
+  3 ; exp.py 997 6
+  3 ; exp.py 997 12
+  3 ; exp.py 1000 3
+  3 ; exp.py 1000 9
+  3 ; exp.py 2998 3
+  3 ; exp.py 2998 9
+  3 ; exp.py 2998 27
+  3 ; exp.py 2998 37
 
 
 [Subtask 4 - validators/st4.cpp]
@@ -82,4 +97,15 @@
   2 ; generator.py 32 160 1600 12000
   2 ; generator.py 100 1000 10000 40000
   2 ; generator.py 200 10000 10000 1000000000
+
+  # Bernardo case
+  3 ; exp.py 989 13
+  3 ; exp.py 991 11
+  3 ; exp.py 997 6
+  3 ; exp.py 997 12
+  3 ; exp.py 1000 9
+  3 ; exp.py 2998 3
+  3 ; exp.py 2998 9
+  3 ; exp.py 2998 27
+  3 ; exp.py 2998 37
 

@@ -1,16 +1,5 @@
 import sys
-from random import seed, random, randint
-
-
-def shuffled(n):
-  s = [0] * n
-  for i in range(n):
-    c = randint(0, i)
-    if c != i:
-      s[c], s[i] = i, s[c]
-    else:
-      s[i] = i
-  return s
+from random import seed, random, randint, shuffle
 
 
 seed(hash(sys.argv[1]))
@@ -24,7 +13,8 @@ n = max_n
 m = max_m
 p = max_p
 
-nodes = shuffled(n) # Shuffle node labels
+nodes = list(range(n)) # Shuffle node labels
+shuffle(nodes)
 s = randint(0, n - 1)
 t = randint(0, n - 1)
 
@@ -42,12 +32,13 @@ for i in range(n - 1, m):
     if u != v and (u, v) not in edges:
       edges.append((u, v))
       break
+shuffle(edges)
 
-for i in range(m):
+for edge in edges:
   if randint(0, 1) > 0:
-    print("%s %s %s" % (nodes[edges[i][0]] + 1, nodes[edges[i][1]] + 1, randint(1, 1000)))
+    print("%s %s %s" % (nodes[edge[0]] + 1, nodes[edge[1]] + 1, randint(1, 1000)))
   else:
-    print("%s %s %s" % (nodes[edges[i][1]] + 1, nodes[edges[i][0]] + 1, randint(1, 1000)))
+    print("%s %s %s" % (nodes[edge[1]] + 1, nodes[edge[0]] + 1, randint(1, 1000)))
 
 print(p)
 

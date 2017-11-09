@@ -1,16 +1,5 @@
 import sys
-from random import seed, random, randint
-
-
-def shuffled(n):
-  s = [0] * n
-  for i in range(n):
-    c = randint(0, i)
-    if c != i:
-      s[c], s[i] = i, s[c]
-    else:
-      s[i] = i
-  return s
+from random import seed, random, randint, shuffle
 
 
 seed(hash(sys.argv[1]))
@@ -23,7 +12,7 @@ n = max_n
 m = n - 1
 p = 0 if train_case == 0 else 1
 
-nodes = list(range(n))  # Shuffle node labels
+nodes = list(range(n))  # Don't shuffle node labels
 s = randint(0, n - 1)
 while True:
   t = randint(0, n - 1)
@@ -34,7 +23,8 @@ if s > t:
 
 print("%d %d %d %d" % (n, m, nodes[s] + 1, nodes[t] + 1))
 
-edge_map = shuffled(n - 1) # Shuffle print order of edges
+edge_map = list(range(n - 1)) # Shuffle print order of edges
+shuffle(edge_map)
 weights = [randint(2, 1000) for i in range(n - 1)]
 for i in range(n - 1):
   if randint(0, 1) > 0:
