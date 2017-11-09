@@ -12,7 +12,7 @@
 # To generate test cases using test plan use `ocimatic gen-input`
 
 
-[Subtask 1]
+[Subtask 1 - validators/st1.cpp]
   # Use sample data as test
   1 ; copy statement/sample-1.in
 
@@ -25,7 +25,7 @@
   2 ; generator_line.py 1000 0 0
 
 
-[Subtask 2]
+[Subtask 2 - validators/st2.cpp]
   # Use sample data as test
   1 ; copy statement/sample-2.in
 
@@ -47,7 +47,7 @@
   2 ; generator_line.py 1000 4 0
 
 
-[Subtask 3]
+[Subtask 3 - validators/st3.cpp]
   # Use sample data as test
   1 ; copy statement/sample-3.in
 
@@ -67,7 +67,7 @@
   2 ; generator.py 100 4949 0 0
 
 
-[Subtask 4]
+[Subtask 4 - validators/st4.cpp]
   # Use sample data as test
   1 ; copy statement/sample-4.in
 

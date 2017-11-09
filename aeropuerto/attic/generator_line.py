@@ -23,7 +23,7 @@ n = max_n
 m = n - 1
 p = 0 if train_case == 0 else 1
 
-nodes = shuffled(n) # Shuffle node labels
+nodes = list(range(n))  # Shuffle node labels
 s = randint(0, n - 1)
 while True:
   t = randint(0, n - 1)
