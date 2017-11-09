@@ -1,8 +1,9 @@
 {
+    "phase": "Final Nacional",
     "tasks": [
-        "aeropuerto",
+        "tarea",
         "zolda",
         "varita",
-        "tarea"
+        "aeropuerto"
     ]
 }
