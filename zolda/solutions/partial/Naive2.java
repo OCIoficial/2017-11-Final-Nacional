@@ -3,10 +3,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class incorrect {
+public class Naive2 {
 	static int n;
 	static long k;
-	static long[] x, y;
+	static int[] x, y;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -14,14 +14,17 @@ public class incorrect {
 		st = new StringTokenizer(br.readLine());
 		n = Integer.parseInt(st.nextToken());
 		k = Long.parseLong(st.nextToken());
-		x = new long[n];
-		y = new long[n];
+		x = new int[n];
+		y = new int[n];
 		for (int i = 0; i < n; i++) {
 			st = new StringTokenizer(br.readLine());
-			x[i] = Long.parseLong(st.nextToken());
-			y[i] = Long.parseLong(st.nextToken());
+			x[i] = Integer.parseInt(st.nextToken());
+			y[i] = Integer.parseInt(st.nextToken());
 		}
-		System.out.println(binarySearch(0L, 100000L));
+		long r = 1;
+		while (count(r) < k) 
+			r+=r;
+		System.out.println(binarySearch(0L, r));
 	}
 
 	private static long binarySearch(long l, long r) {
@@ -36,22 +39,17 @@ public class incorrect {
 	}
 
 	private static long count(long r) {
-		long ans = 0;
-		for (long i = 0; i <= r; i++) {
-			long j = (long) Math.floor(Math.sqrt(r * r - i * i));
-			if (i == 0) {
-				ans += 2 * j;
-				ans += 1;
-			} else {
-				ans += 4 * j;
-				ans += 2;
+		long ans = 4*r;
+		for (long i = 1; i <= r; i++) {
+			for (long j = 1; j <= r; j++) {
+				if (i * i + j * j <= r * r)
+					ans+=4;
 			}
-			
 		}
 		for (int i = 0; i < n; i++) {
-			if (x[i] * x[i] + y[i] * y[i] <= r)
+			if (x[i] * x[i] + y[i] * y[i] <= r * r)
 				ans--;
 		}
-		return ans - 1;
+		return ans;
 	}
 }
