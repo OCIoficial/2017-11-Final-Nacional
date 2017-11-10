@@ -42,7 +42,7 @@ public class Main {
 		long ans = 4*r;
 		for (long i = 1; i <= r; i++) {
 			for (long j = 1; j <= r; j++) {
-				if (i * i + j*j <= r)
+				if (i * i + j * j <= r * r)
 					ans+=4;
 			}
 		}
