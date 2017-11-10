@@ -13,6 +13,7 @@ maxY = int(sys.argv[7])
 print(str(n) + " " + str(k))
 
 points = set()
+points.add((0, 0))
 for _ in range(n):
     while True:
         x = random.randint(minX, maxX)
