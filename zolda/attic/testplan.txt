@@ -29,6 +29,7 @@
 [Subtask 2 - validators/st2.cpp]
   # Random tests
   # Rand params: n     | k     | minX | maxX | minY | maxY
+  1 ; copy attic/manual-1.txt
   # 3 ; gen_random.py 6      1      1      3      1      3
   3 ; gen_random.py 7      1      1      3      1      3
   3 ; gen_random.py 8      1      1      3      1      3
@@ -74,10 +75,10 @@
   3 ; gen_random.py 8      9      1      3      1      3
   3 ; gen_random.py 9      9      1      4      1      4
   # 3 ; gen_random.py 10     9      1      4      1      4
+  3 ; gen_random.py 4      10      1      3      1      3
+  3 ; gen_random.py 5      10      1      3      1      3
   3 ; gen_random.py 6      10      1      3      1      3
-  3 ; gen_random.py 7      10      1      3      1      3
-  # 3 ; gen_random.py 8      10      1      3      1      3
-  3 ; gen_random.py 9      10      1      4      1      4
+  3 ; gen_random.py 7      10      1      4      1      4
   3 ; gen_random.py 10     10      1      4      1      4
 
 [Subtask 3 - validators/st3.cpp]
