@@ -83,26 +83,26 @@
 [Subtask 3 - validators/st3.cpp]
   # Random tests
   # Rand params: n     | k     | minX      | maxX      | minY | maxY 
-  3 ; gen_random.py 100   4001    0         30          0       30
-  3 ; gen_random.py 100   4011    0         30          0       30
-  3 ; gen_random.py 100   4021    0         30          0       30
-  3 ; gen_random.py 100   4031    0         30          0       30
-  3 ; gen_random.py 100   4041    0         30          0       30
-  3 ; gen_random.py 100   4051    0         30          0       30
-  3 ; gen_random.py 100   4061    0         30          0       30
-  3 ; gen_random.py 100   4071    0         30          0       30
-  3 ; gen_random.py 100   4081    0         30          0       30
-  3 ; gen_random.py 100   4091    0         30          0       30
-  3 ; gen_random.py 100   4500    0         30          0       30
-  3 ; gen_random.py 100   4500    0         30          0       30
-  3 ; gen_random.py 100   5000    0         30          0       30
-  3 ; gen_random.py 100   3408    0         30          0       30
-  3 ; gen_random.py 100   3624    0         30          0       30
-  3 ; gen_random.py 100   3852    0         30          0       30
-  3 ; gen_random.py 100   4052    0         30          0       30
-  3 ; gen_random.py 100   4292    0         30          0       30
-  3 ; gen_random.py 100   4512    0         30          0       30
-  3 ; gen_random.py 100   4776    0         30          0       30
+  3 ; gen_random.py 100   4001    6         30          6       30
+  3 ; gen_random.py 100   4011    6         30          6       30
+  3 ; gen_random.py 100   4021    6         30          6       30
+  3 ; gen_random.py 100   4031    6         30          6       30
+  3 ; gen_random.py 100   4041    6         30          6       30
+  3 ; gen_random.py 100   4051    6         30          6       30
+  3 ; gen_random.py 100   4061    6         30          6       30
+  3 ; gen_random.py 100   4071    6         30          6       30
+  3 ; gen_random.py 100   4081    6         30          6       30
+  3 ; gen_random.py 100   4091    6         30          6       30
+  3 ; gen_random.py 100   4500    6         30          6       30
+  3 ; gen_random.py 100   4500    6         30          6       30
+  3 ; gen_random.py 100   5000    6         30          6       30
+  3 ; gen_random.py 100   3408    6         30          6       30
+  3 ; gen_random.py 100   3624    6         30          6       30
+  3 ; gen_random.py 100   3852    6         30          6       30
+  3 ; gen_random.py 100   4052    6         30          6       30
+  3 ; gen_random.py 100   4292    6         30          6       30
+  3 ; gen_random.py 100   4512    6         30          6       30
+  3 ; gen_random.py 100   4776    6         30          6       30
 
 [Subtask 4 - validators/st4.cpp]
   # Random tests

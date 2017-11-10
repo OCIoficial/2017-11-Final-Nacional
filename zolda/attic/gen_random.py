@@ -29,4 +29,6 @@ for _ in range(n):
     points.add((x, y))
 
 for x, y in points:
+    if x == 0 and y == 0:
+        continue
     print(x, y)
