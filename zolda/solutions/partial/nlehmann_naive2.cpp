@@ -15,11 +15,11 @@ using namespace std;
 
 vector<pair<int,int>> not_meblins;
 
-long long norm2(pair<int, int> p) {
-  return ((long long) p.first)*p.first + ((long long) p.second)*p.second;
+int norm2(pair<int, int> p) {
+  return p.first*p.first + p.second*p.second;
 }
 
-int pointsInCircle(long long R) {
+int pointsInCircle(int R) {
   int points = 0;
   for (int i = -R; i <= R; ++i)
     for (int j = -R; j <= R; ++j)
@@ -28,7 +28,7 @@ int pointsInCircle(long long R) {
   return points - 1;
 }
 
-int emptyPoints(long long R) {
+int emptyPoints(int R) {
   int sum = 0;
   for (auto p : not_meblins)
     if (norm2(p) <= R*R)
