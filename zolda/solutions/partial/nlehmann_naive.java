@@ -38,7 +38,7 @@ public class nlehmann_naive {
         }
 
         int r = 1;
-        while(pointsInCircle(r) + emptyPoints(r) < K)
+        while(pointsInCircle(r) - emptyPoints(r) < K)
             r++;
 
         System.out.println(r);
