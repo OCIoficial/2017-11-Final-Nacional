@@ -21,10 +21,7 @@ public class Naive2 {
 			x[i] = Integer.parseInt(st.nextToken());
 			y[i] = Integer.parseInt(st.nextToken());
 		}
-		long r = 1;
-		while (count(r) < k) 
-			r+=r;
-		System.out.println(binarySearch(0L, r));
+		System.out.println(binarySearch(0L, 100000L));
 	}
 
 	private static long binarySearch(long l, long r) {
@@ -39,17 +36,22 @@ public class Naive2 {
 	}
 
 	private static long count(long r) {
-		long ans = 4*r;
-		for (long i = 1; i <= r; i++) {
-			for (long j = 1; j <= r; j++) {
-				if (i * i + j * j <= r * r)
-					ans+=4;
+		long ans = 0;
+		for (long i = 0; i <= r; i++) {
+			long j = (long) Math.floor(Math.sqrt(r * r - i * i));
+			if (i == 0) {
+				ans += 2 * j;
+				ans += 1;
+			} else {
+				ans += 4 * j;
+				ans += 2;
 			}
+			
 		}
 		for (int i = 0; i < n; i++) {
 			if (x[i] * x[i] + y[i] * y[i] <= r * r)
 				ans--;
 		}
-		return ans;
+		return ans - 1;
 	}
 }
